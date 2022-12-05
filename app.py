@@ -71,13 +71,13 @@ t_abusive = pd.read_sql_query(q_abusive, db)
 def replace_alay(s):
     kamus_alay = dict(zip(t_kamus_alay['anakjakartaasikasik'],t_kamus_alay['anak jakarta asyik asyik']))
     for i in kamus_alay:
-        return '*****'.join([kamus_alay[i] if i in kamus_alay else i for i in s.split(' ')])
+        return ' '.join([kamus_alay[i] if i in kamus_alay else i for i in s.split(' ')])
 
 
 def remove_abusive (s):
     abusive_words = t_abusive['ABUSIVE'].str.lower().tolist()
     word_list = s.split()
-    return '*****'.join([s for s in word_list if s not in abusive_words ])
+    return ' '.join([s for s in word_list if s not in abusive_words ])
 
 #cleansing all#
 def text_cleansing (s):
