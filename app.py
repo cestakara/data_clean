@@ -44,7 +44,7 @@ def lowercase(s):
 #clean unwanted character  
 def clean(s):
     #Remove USER, RT, RETWEET, URL, http, https
-    s = re.sub('use|rt|retweet|url|http|https',' ', s)
+    s = re.sub('user|rt|retweet|url|http|https',' ', s)
     #Remove text berawalan angka
     s = re.sub('(\d{1,})', ' ', s)
     #Remove emoji

@@ -1,7 +1,7 @@
 tags:
-  - name: Lang
+  - name: post_text
 del :
-  description: Lang
+  description:
 parameters:
   - name: upload_data
     in: formData
